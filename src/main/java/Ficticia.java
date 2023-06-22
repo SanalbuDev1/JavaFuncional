@@ -5,16 +5,16 @@ public class Ficticia{
 
     static IFicticia iFicticia = new IFicticia() {
         @Override
-        public void aceptar() {
-            System.out.println("ficticia");
+        public void aceptar(String message) {
+            System.out.println(message);
         }
     };
 
-    static IFicticia iFicticia2 = () ->  {System.out.println("ficticia");};
+    static IFicticia iFicticia2 = (message) ->  {System.out.println(message);};
 
     public static void main(String[] args) {
-        iFicticia.aceptar();
-        iFicticia2.aceptar();
+        iFicticia.aceptar("Hola mundo");
+        iFicticia2.aceptar("Hola mundo");
     }
 
     }
